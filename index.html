@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f5f6f8">
+    <meta name="description" content="Asistente paso a paso para preparar tu proyector PUTRIMS S36 y disfrutar de tu cine en casa.">
+    <title>Tu cine en casa · PUTRIMS S36</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Asistente de instalación PUTRIMS">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>Tu cine en casa</span>
+        </a>
+        <button class="text-button" id="restart-top" type="button">Empezar de nuevo</button>
+      </header>
+
+      <main class="main-content">
+        <section class="assistant" aria-labelledby="step-title">
+          <div class="progress-area">
+            <div class="progress-copy">
+              <span class="eyebrow" id="step-count">Paso 1 de 12</span>
+              <span class="progress-caption" id="progress-caption">Un paso cada vez</span>
+            </div>
+            <div class="progress-track" id="progress-track" role="progressbar" aria-label="Progreso de la instalación" aria-valuemin="1" aria-valuemax="12" aria-valuenow="1">
+              <span class="progress-fill" id="progress-fill"></span>
+            </div>
+          </div>
+
+          <div class="step-layout" id="step-panel" aria-live="polite">
+            <div class="visual-panel">
+              <div class="visual-glow" aria-hidden="true"></div>
+              <div class="step-visual" id="step-visual"></div>
+              <span class="visual-caption" id="visual-caption"></span>
+            </div>
+
+            <div class="step-copy">
+              <p class="step-kicker" id="step-kicker"></p>
+              <h1 id="step-title"></h1>
+              <p class="step-intro" id="step-intro"></p>
+              <div class="step-detail" id="step-detail"></div>
+              <div class="step-warning" id="step-warning" hidden></div>
+              <div class="help-area" id="help-area" hidden>
+                <button class="help-toggle" id="help-toggle" type="button" aria-expanded="false" aria-controls="help-content">
+                  <span class="help-icon" aria-hidden="true">?</span>
+                  <span>Necesito ayuda</span>
+                  <span class="help-chevron" aria-hidden="true">⌄</span>
+                </button>
+                <div class="help-content" id="help-content" hidden></div>
+              </div>
+            </div>
+          </div>
+
+          <p class="save-status" id="save-status" role="status" aria-live="polite"></p>
+
+          <nav class="step-actions" aria-label="Navegación del asistente">
+            <button class="back-button" id="back-button" type="button">
+              <span aria-hidden="true">←</span> Volver
+            </button>
+            <button class="primary-button" id="next-button" type="button">
+              Continuar <span aria-hidden="true">→</span>
+            </button>
+          </nav>
+        </section>
+
+        <aside class="model-note">
+          <span class="note-icon" aria-hidden="true">i</span>
+          <p>
+            Los menús y las aplicaciones pueden variar según la versión del proyector.
+            <a href="https://putrims.com/products/s36" target="_blank" rel="noopener noreferrer">Ver ficha oficial del S36</a>
+          </p>
+        </aside>
+      </main>
+
+      <footer class="footer">
+        <span>Hecho para disfrutar, sin prisas <span aria-hidden="true">♥</span></span>
+      </footer>
+    </div>
+  </body>
+</html>
